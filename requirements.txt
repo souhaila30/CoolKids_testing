@@ -4,3 +4,6 @@ pandas
 ipython
 jupyter
 matplotlib
+pytest
+pytest-cov
+pytest-pep8
