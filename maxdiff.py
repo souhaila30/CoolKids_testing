@@ -1,0 +1,3 @@
+def maxdiff(input):
+	
+	
