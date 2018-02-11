@@ -8,7 +8,7 @@ def test_sum_list_integer():
     sum_ = sum_list(list_of_numbers_1)
     assert sum_ == 164
 
-def test_sum_list_decimal():
+def test_sum_list_decimals():
     from sumofnumbers import sum_list
     sum_ = sum_list(list_of_numbers_2)
     assert sum_ == 51.21
