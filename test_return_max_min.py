@@ -23,6 +23,6 @@ def test_precision():
 
 def test_tuple_size():
     from return_max_min import tuple_generator
-    min_max = tuple_generator(23,32)
+    min_max = tuple_generator(23, 53)
     assert len(min_max) == 2
 
