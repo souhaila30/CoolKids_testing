@@ -1,4 +1,3 @@
-
 def find_min(number_list):
     import numpy as np
     min_ = np.min(number_list)
