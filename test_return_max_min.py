@@ -1,5 +1,6 @@
 # testing return max and min function
 import pytest
+import math
 
 def test_min():
     from return_max_min import find_min_max
@@ -22,8 +23,16 @@ def test_tuple_size():
     assert len(min_max) == 2
 
 def test_try_exception_type():
-    from return_max_min import find_min_max
+    from return_max_min import find_exceptions
     with pytest.raises(TypeError):
-        find_min_max(['a',7,-20])
+        find_exceptions(['a',7,-20])
   
+def test_try_exception_import():
+    from return_max_min import find_exceptions
+    with pytest.raises(ImportError):
+         import ThisIsNotAFile
 
+def test_try_exception_value():
+    from return_max_min import find_exceptions
+    with pytest.raises(ValueError):
+        find_exceptions([math.sqrt(-2342437), 3232, -1221])
