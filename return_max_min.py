@@ -32,16 +32,17 @@ def find_exceptions(number_list):
     except TypeError:
         logging.debug('DEBUG: Try checking the data type of number_list')
         logging.warning('WARNING: Your Program may blow up from the wrong data type')
-        raise TypeError("you have the wrong Data type in your list")
+        raise TypeError
 
     except ImportError:
         logging.debug('DEBUG: Error in input files')
         logging.warning('WARNING: You have tried to import something that DNE')
+        raise ImportError
 
     except ValueError:
         logging.debug('DEBUG: There is a value error, make sure the integer is real')
         logging.warning('Warning: there is a value error, make sure the integer is real')
-
+        raise ValueError
 def main(number_list):
     """fxn runs find min max, checks for exceptions and documents logging time stamps
   
