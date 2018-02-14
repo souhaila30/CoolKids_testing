@@ -1,3 +1,5 @@
+import numpy as np
+import logging
 
 def sum_list(num_list):
     sum_ = sum(num_list)
@@ -18,13 +20,12 @@ def find_min_max(number_list):
     return max_min
 
 def maxdiff(num_list):
-	"""Function takes a list of integers and returns the maximum difference between two adjacenet numbers
+    """Function takes a list of integers and returns the maximum difference between two adjacenet numbers
 	
-	:param num_list: list of integers
-	:returns maxdiff: maximum difference 
-	"""
+    :param num_list: list of integers
+    :returns maxdiff: maximum difference 
+    """
 
-    import numpy as np
     diff = np.diff(num_list)
     maxdiff = diff.max()
 
@@ -57,5 +58,4 @@ def find_exceptions(number_list):
     except ValueError:
         logging.debug('DEBUG: There is a value error, make sure the integer is real')
         logging.warning('Warning: there is a value error, make sure the integer is real')
-
         raise ValueError
