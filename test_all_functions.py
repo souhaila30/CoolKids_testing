@@ -1,7 +1,16 @@
+
+import pytest
+import math
+
 list_of_numbers_1 = [29, 3, 77, 55]
 list_of_numbers_2 = [1.23, 9, 6.97, 7, 27.01]
 list_of_numbers_3 = [-7, -8, 26, 54, -2]
 
+
+def test_max_diff():
+    from maxdiff import maxdiff
+    maxdiff_output = maxdiff([1,2,4,7)
+    assert maxdiff_output == 3
 
 def test_sum_list_integer():
     from sumofnumbers import sum_list
@@ -33,12 +42,6 @@ def test_max():
     assert max_ == 1010
 
 
-def test_doubles():
-    from return_max_min import find_max
-    max_ = find_max([2, 2, 0])
-    assert max_ == 2
-
-
 def test_precision():
     from return_max_min import find_max
     max_ = find_max([1.33, 0, -222])
@@ -47,5 +50,5 @@ def test_precision():
 
 def test_tuple_size():
     from return_max_min import tuple_generator
-    min_max = tuple_generator(23, 53)
+    min_max = tuple_genierator(23, 53)
     assert len(min_max) == 2
