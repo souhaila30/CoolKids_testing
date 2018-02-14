@@ -1,20 +1,22 @@
 import numpy as np
 import logging
 
+logging.basicConfig(filename = 'logging.txt', format= '%(asctime)s %(message)s', datefmt='%m/%d/%Y &I:%M:%S %p', level =logging.DEBUG)
+
 def sum_list(num_list):
     sum_ = sum(num_list)
     return sum_
 
 
-def find_min_max(number_list):
+def find_min_max(num_list):
     """fxn takes list of integers and returns min and max in a tuple
 
-    :param number_list: list of integers
+    :param num_list: list of integers
     :returns max_min: a tuple containing the max and min of a list
 
     """ 
-    min_ = np.min(number_list)
-    max_ = np.max(number_list)
+    min_ = np.min(num_list)
+    max_ = np.max(num_list)
     max_min = (min_, max_)
 
     return max_min
@@ -31,18 +33,18 @@ def maxdiff(num_list):
 
     return maxdiff
 
-def find_exceptions(number_list):
+def find_exceptions(num_list):
 
     """ fxn checks and raises appropriate exceptions: type, value and import
 
-    :param number_list: list of integers
+    :param num_list: list of integers
     :raises TypeError: checks to make sure list is integers
     :raises ImportError: checks to make sure correct files are imported
     :raises ValueError: makes sure the integers have real values
 
     """
     try:
-        find_min_max([number_list])
+        find_min_max([num_list])
         maxdiff([num_list])
         sum_list([num_list])
     except TypeError:
@@ -59,3 +61,5 @@ def find_exceptions(number_list):
         logging.debug('DEBUG: There is a value error, make sure the integer is real')
         logging.warning('Warning: there is a value error, make sure the integer is real')
         raise ValueError
+
+
