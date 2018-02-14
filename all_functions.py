@@ -18,9 +18,16 @@ def find_min_max(number_list):
     return max_min
 
 def maxdiff(num_list):
+	"""Function takes a list of integers and returns the maximum difference between two adjacenet numbers
+	
+	:param num_list: list of integers
+	:returns maxdiff: maximum difference 
+	"""
+
     import numpy as np
     diff = np.diff(num_list)
     maxdiff = diff.max()
+
     return maxdiff
 
 def find_exceptions(number_list):
