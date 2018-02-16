@@ -12,6 +12,7 @@ def test_max_diff():
     maxdiff_output = maxdiff([1,2,4,7])
     assert maxdiff_output == 3
 
+
 def test_sum_list_integer():
     from all_functions import sum_list
     sum_ = sum_list(list_of_numbers_1)
