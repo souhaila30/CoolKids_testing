@@ -5,16 +5,13 @@ logging.basicConfig(filename='logging.txt', format='%(asctime)s %(message)s', da
 
 
 def sum_list(num_list):
-
     """Function takes list of integers and returns the sum of the list
 
        :param num_list: list of integers
        :returns sum_: the sum of the list of integers
-
-       """
-
-    sum_ = sum(num_list)
-
+   
+    """
+    sum_ = np.sum(num_list)
     return sum_
 
 
@@ -73,3 +70,13 @@ def find_exceptions(num_list):
         logging.debug('DEBUG: There is a value error, make sure the integer is real')
         logging.warning('Warning: there is a value error, make sure the integer is real')
         raise ValueError
+
+def main(num_list):
+    logging.info('INFO: Program Started')
+    find_exceptions(num_list)
+    sum_ =sum_list(num_list)
+    max_min = find_min_max(num_list)
+    max_diff= maxdiff(num_list)
+    logging.info('INFO: Program Ended')
+
+    return sum_, max_min, max_diff
