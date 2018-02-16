@@ -20,8 +20,9 @@ def find_min_max(number_list):
 def maxdiff(num_list):
 	"""Function takes a list of integers and returns the maximum difference between two adjacenet numbers
 	
-	:param num_list: list of integers
-	:returns maxdiff: maximum difference 
+    :param num_list: list of integers
+    :returns maxdiff: maximum difference 
+
 	"""
 
     import numpy as np
