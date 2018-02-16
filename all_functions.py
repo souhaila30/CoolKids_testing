@@ -1,15 +1,25 @@
 import numpy as np
 import logging
 
-logging.basicConfig(filename = 'logging.txt', format= '%(asctime)s %(message)s', datefmt='%m/%d/%Y &I:%M:%S %p', level =logging.DEBUG)
+logging.basicConfig(filename='logging.txt', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y &I:%M:%S %p', level=logging.DEBUG)
+
 
 def sum_list(num_list):
+
+    """Function takes list of integers and returns the sum of the list
+
+       :param num_list: list of integers
+       :returns sum_: the sum of the list of integers
+
+       """
+
     sum_ = sum(num_list)
+
     return sum_
 
 
 def find_min_max(num_list):
-    """fxn takes list of integers and returns min and max in a tuple
+    """Function takes list of integers and returns min and max in a tuple
 
     :param num_list: list of integers
     :returns max_min: a tuple containing the max and min of a list
@@ -21,9 +31,10 @@ def find_min_max(num_list):
 
     return max_min
 
+
 def maxdiff(num_list):
-    """Function takes a list of integers and returns the maximum difference between two adjacenet numbers
-	
+    """Function takes a list of integers and returns the maximum difference between two adjacent numbers
+
     :param num_list: list of integers
     :returns maxdiff: maximum difference 
     """
@@ -32,6 +43,7 @@ def maxdiff(num_list):
     maxdiff = diff.max()
 
     return maxdiff
+
 
 def find_exceptions(num_list):
 
@@ -61,5 +73,3 @@ def find_exceptions(num_list):
         logging.debug('DEBUG: There is a value error, make sure the integer is real')
         logging.warning('Warning: there is a value error, make sure the integer is real')
         raise ValueError
-
-
