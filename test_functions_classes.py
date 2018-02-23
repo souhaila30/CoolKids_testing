@@ -39,7 +39,6 @@ def test_try_exception_import():
         import ThisIsNotAFile
 
 def test_try_exception_value():
-   # from functions_classes import find_exceptions
     with pytest.raises(ValueError):
        Functions.find_exceptions([56574564776846786])
 
