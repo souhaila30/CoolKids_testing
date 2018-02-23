@@ -30,12 +30,11 @@ def test_tuple_size():
     assert len(test_tuple) == 2
 
 def test_try_exception_type():
-   # from functions_classes import find_exceptions
     with pytest.raises(TypeError):
         Functions.find_exceptions(['a',9,-1])
 
 def test_try_exception_import():
-   # from functions_classes import find_exceptions
+    Functions.find_exceptions
     with pytest.raises(ImportError):
         import ThisIsNotAFile
 

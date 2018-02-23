@@ -1,0 +1,4 @@
+02/23/2018 &I:56:08 AM DEBUG: Check the data type in the list of numbers
+02/23/2018 &I:56:08 AM WARNING: You have the wrong data type, be careful
+02/23/2018 &I:56:08 AM DEBUG: value error, check the list of numbers
+02/23/2018 &I:56:08 AM WARNING: value error, value other than an integer is an input

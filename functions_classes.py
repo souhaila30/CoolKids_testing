@@ -1,4 +1,5 @@
-class Functions: 
+class Functions:
+    import logging
 
     """
 
@@ -72,7 +73,7 @@ class Functions:
 
         return min_max
 
-    def find_exceptions():
+    def find_exceptions(num_list):
         """
 
         function checks and raises appropriate excpetions: type, value, import
@@ -83,11 +84,12 @@ class Functions:
         :raises ValueError: make sure the integers have real values
 
         """
+        import logging
 
         try:
-            find_sum([num_list])
-            find_max_diff([num_list])
-            find_min_max([num_list])
+            Functions.find_sum(num_list)
+            Functions.find_max_diff(num_list)
+            Functions.find_min_max(num_list)
 
         except TypeError:
             logging.debug('DEBUG: Check the data type in the list of numbers')
@@ -107,10 +109,10 @@ class Functions:
     def main(num_list):
         import logging
         logging.info('INFO: Program started')
-        find_exceptions(num_list)
-        sum_  = find_sum(num_list)
-        max_min = find_min_max(num_list)
-        max_diff = find_max_diff(num_list)
+        Functions.find_exceptions(num_list)
+        sum_  = Functions.find_sum(num_list)
+        max_min = Functions.find_min_max(num_list)
+        max_diff = Functions.find_max_diff(num_list)
         logging.info('INFO:Program ended')
 
         return sum_, max_min, max_diff
