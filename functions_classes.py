@@ -1,5 +1,4 @@
-class Functions:
-    num_list = []
+class Functions: 
 
     """
 
@@ -16,9 +15,13 @@ class Functions:
         """
 
         self.num_list = num_list
+        self.find_sum = find_sum
+        self.find_min_max = find_min_max
+        self.find_max_diff = find_max_diff
 
     import logging
     logging.basicConfig(filename = 'logging.txt', format = '%(asctime)s %(message)s', datefmt = '%m/%d/%Y &I:%M:%S %p', level = logging.DEBUG)
+
     def find_sum(num_list):
 
         """
@@ -62,18 +65,17 @@ class Functions:
         :returns min_max: a tuple containing the max and the min
 
         """
-
+        import numpy as np
         min_list = np.min(num_list)
         max_list = np.max(num_list)
         min_max = (min_list, max_list)
 
         return min_max
 
-    def find_exceptions(num_list):
-
+    def find_exceptions():
         """
 
-        fucntion checks and raises appropriate excpetions: type, value, import
+        function checks and raises appropriate excpetions: type, value, import
 
         :param num_list: list of numbers
         :raises TypeError: checks to make sure only integers are in the list of numbers
@@ -82,10 +84,10 @@ class Functions:
 
         """
 
-        try: 
-            find_sum(num_list)
-            find_max_diff(num_list)
-            find_min_max(num_list)
+        try:
+            find_sum([num_list])
+            find_max_diff([num_list])
+            find_min_max([num_list])
 
         except TypeError:
             logging.debug('DEBUG: Check the data type in the list of numbers')
@@ -103,12 +105,13 @@ class Functions:
             raise ValueError
 
     def main(num_list):
-       logging.info('INFO: Program started')
-       find_exceptions(num_list)
-       sum_  = find_sum(num_list)
-       max_min = find_min_max(num_list)
-       max_diff = find_max_diff(num_list)
-       logging.info('INFO:Program ended')
+        import logging
+        logging.info('INFO: Program started')
+        find_exceptions(num_list)
+        sum_  = find_sum(num_list)
+        max_min = find_min_max(num_list)
+        max_diff = find_max_diff(num_list)
+        logging.info('INFO:Program ended')
 
-       return sum_, max_min, max_diff
+        return sum_, max_min, max_diff
 
